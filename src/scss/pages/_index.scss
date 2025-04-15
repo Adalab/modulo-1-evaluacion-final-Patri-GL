@@ -1,6 +1,74 @@
 @use "../core/variables" as vars;
+@use "../components/links" as links;
 
-.main__list {
-  padding-left: 2rem;
-  padding-bottom: 20px;
+.body {
+  font-family: vars.$font-main;
+}
+
+h1 {
+  font-family: vars.$font-title;
+  font-size: 42px;
+}
+.anonymous {
+  background-image: url("../images/cover.jpeg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.window {
+}
+
+.reasons {
+  background-color: vars.$color-background;
+  text-align: center;
+}
+.go_btn {
+  display: flex;
+  border: solid vars.$color-orange 2px;
+  color: vars.$color-orange;
+  width: 5rem;
+  height: 3rem;
+  justify-content: center;
+  border-radius: 1.5rem;
+  align-items: center;
+}
+
+.more_btn {
+  display: flex;
+  border: solid vars.$color-orange 2px;
+  color: white;
+  background-color: vars.$color-orange;
+  width: 10rem;
+  height: 3rem;
+  justify-content: center;
+  border-radius: 1.5rem;
+  align-items: center;
+}
+
+.scroll_down {
+  display: flex;
+  border: solid white 2px;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  border-radius: 3rem;
+  align-items: center;
+  object-fit: contain;
+}
+
+.arrow {
+  display: flex;
+  border: solid white 2px;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  border-radius: 3rem;
+  align-items: center;
+  object-fit: contain;
 }
