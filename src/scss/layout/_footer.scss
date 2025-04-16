@@ -1,15 +1,12 @@
 @use "../core/variables" as vars;
 
 .page__footer {
-  left: 0;
-  bottom: 0;
   width: 100%;
-  padding: 0rem;
   color: white;
   background-color: vars.$color-bgsecondary;
   font-family: vars.$font-main;
-  display: grid;
-  grid-template-columns: 1;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -18,8 +15,8 @@
   height: 50%;
 }
 .arrow {
-  display: flex;
-  border: solid white 2px;
+  flex: 100%;
+  border: solid white 8px;
   background-color: white;
   width: 2rem;
   height: 2rem;
@@ -27,19 +24,53 @@
   border-radius: 3rem;
   align-items: center;
   object-fit: contain;
+  margin: auto;
+  margin-top: -1rem;
 }
 .list {
+  flex: 100%;
   list-style: none;
   text-align: center;
+  line-height: 1.75rem;
+}
+
+.UTF {
+  font-size: smaller;
 }
 @media all and (min-width: 500px) {
   .page__footer {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    gap: 1rem;
   }
+  .arrow {
+    flex: 100%;
+    width: 3rem;
+    height: 3rem;
+  }
+  .UTF {
+    flex: 20%;
+    order: 2;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .articles {
+    order: 3;
+    flex: 20%;
+    text-align: left;
+  }
+  .social {
+    order: 4;
+    flex: 20%;
+    text-align: left;
+    align-self: start;
+  }
+}
 
-  .utf {
-    order: 1;
+@media all and (min-width: 1024px) {
+  .page__footer {
+    padding-inline: 20%;
   }
 }
